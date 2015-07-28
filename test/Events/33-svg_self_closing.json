@@ -1,0 +1,66 @@
+{
+  "name": "Self-closing SVG element",
+  "options": {
+    "handler": {},
+    "parser": {}
+  },
+  "html": "<use xlink:href=/background.svg /><use xlink:href=/icon.svg />",
+  "expected": [
+    {
+      "event": "opentagname",
+      "data": [
+        "use"
+      ]
+    },
+    {
+      "event": "attribute",
+      "data": [
+        "xlink:href",
+        "/background.svg"
+      ]
+    },
+    {
+      "event": "opentag",
+      "data": [
+        "use",
+        {
+          "xlink:href": "/background.svg"
+        }
+      ]
+    },
+    {
+      "event": "closetag",
+      "data": [
+        "use"
+      ]
+    },
+    {
+      "event": "opentagname",
+      "data": [
+        "use"
+      ]
+    },
+    {
+      "event": "attribute",
+      "data": [
+        "xlink:href",
+        "/icon.svg"
+      ]
+    },
+    {
+      "event": "opentag",
+      "data": [
+        "use",
+        {
+          "xlink:href": "/icon.svg"
+        }
+      ]
+    },
+    {
+      "event": "closetag",
+      "data": [
+        "use"
+      ]
+    }
+  ]
+}

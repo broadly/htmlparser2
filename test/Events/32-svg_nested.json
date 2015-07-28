@@ -1,0 +1,63 @@
+{
+  "name": "Nested SVG element",
+  "options": {
+    "handler": {},
+    "parser": {}
+  },
+  "html": "<use xlink:href=/icon.svg><title>SVG Icon</title></use>",
+  "expected": [
+    {
+      "event": "opentagname",
+      "data": [
+        "use"
+      ]
+    },
+    {
+      "event": "attribute",
+      "data": [
+        "xlink:href",
+        "/icon.svg"
+      ]
+    },
+    {
+      "event": "opentag",
+      "data": [
+        "use",
+        {
+          "xlink:href": "/icon.svg"
+        }
+      ]
+    },
+    {
+      "event": "opentagname",
+      "data": [
+        "title"
+      ]
+    },
+    {
+      "event": "opentag",
+      "data": [
+        "title",
+        {}
+      ]
+    },
+    {
+      "event": "text",
+      "data": [
+        "SVG Icon"
+      ]
+    },
+    {
+      "event": "closetag",
+      "data": [
+        "title"
+      ]
+    },
+    {
+      "event": "closetag",
+      "data": [
+        "use"
+      ]
+    }
+  ]
+}
