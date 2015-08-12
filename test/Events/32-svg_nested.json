@@ -4,8 +4,21 @@
     "handler": {},
     "parser": {}
   },
-  "html": "<use xlink:href=/icon.svg><title>SVG Icon</title></use>",
+  "html": "<svg><use xlink:href=/icon.svg><title>SVG Icon</title></use></svg>",
   "expected": [
+    {
+      "event": "opentagname",
+      "data": [
+        "svg"
+      ]
+    },
+    {
+      "event": "opentag",
+      "data": [
+        "svg",
+        {}
+      ]
+    },
     {
       "event": "opentagname",
       "data": [
@@ -57,6 +70,12 @@
       "event": "closetag",
       "data": [
         "use"
+      ]
+    },
+    {
+      "event": "closetag",
+      "data": [
+        "svg"
       ]
     }
   ]
